@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Image, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, Image, StyleSheet, Text, Pressable } from "react-native";
 import BackgroundImg from "../assets/little-lemon-logo.png";
 import SubscribeScreen from "./SubscribeScreen";
 const WelcomeScreen = ({ navigation }) => {
@@ -11,12 +11,12 @@ const WelcomeScreen = ({ navigation }) => {
           Little Lemon, your local{"\n"}Mediterranean Bistro
         </Text>
       </View>
-      <TouchableOpacity
+      <Pressable
         style={styles.NewsletterButton}
         onPress={() => navigation.navigate(SubscribeScreen)}
       >
         <Text style={styles.ButtonTitle}>Newsletter</Text>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };
