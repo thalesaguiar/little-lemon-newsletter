@@ -7,9 +7,21 @@ const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="SubscribeScreen" component={SubscribeScreen} />
+    <Stack.Navigator
+      screenOptions={{
+        headerTitleAlign: "center",
+      }}
+    >
+      <Stack.Screen
+        name="WelcomeScreen"
+        component={WelcomeScreen}
+        options={{ title: "Welcome" }}
+      />
+      <Stack.Screen
+        name="SubscribeScreen"
+        component={SubscribeScreen}
+        options={{ title: "Subscribe" }}
+      />
     </Stack.Navigator>
   );
 };
